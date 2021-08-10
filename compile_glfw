@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+
+"""
+	@author Jose Rodriguez
+	
+	How to install 
+	
+	1 > Clone repository
+	
+	:> git clone https://github.com/Jose5032/Compile_GLFW3.git <:
+	
+	2 > Go to the directory
+	
+	:> cd Compile_GLFW3 <:
+	
+	3 > Make it executable
+	
+	4 > Copy compile_glfw file to /usr/bin/
+	
+	:> cp compile_glfw /usr/bin/ <:
+	
+"""
+import os, sys
+
+print("Please enter file name without .c")
+file_name = input(""":: """)
+print("Please wait while compiling")
+os.system(f"""gcc `pkg-config --cflags glfw3 glu` -o {file_name} {file_name+'.c'} `pkg-config --libs glfw3 glu`""")
+print(f"The file has been saved as {file_name}\nDo you want execute it now?\n Yes Y:N No\n Yes y:n No")
+execute = str(input(":: "))
+if execute == "Y" or execute == "y":
+	os.system(f"./{file_name}")
+else:
+	print("Bye")
+	sys.exit()
+
+if __name__ == "__main__":
+	sys.exit()
