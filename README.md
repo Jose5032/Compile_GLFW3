@@ -1,7 +1,7 @@
 # Compile_GLFW3
 A python 3 script for compile GLFW3 (Linux)
 
-# How to install
+## How to install
 
 ### 1 > Clone the git repository
 ```
@@ -23,7 +23,7 @@ cp compile_glfw /usr/bin/
 
 
 
-# Example file is > main.c
+## Example file is > main.c
 
 For compile it simply 
 ```
